@@ -5,7 +5,7 @@ import random
 
 # Create GSheets connection
 conn = st.connection("gsheets", type=GSheetsConnection)
-css = """#MainMenu {
+css = """#stAppHeader st-emotion-cache-h4xjwg e10jh26i0 {
   visibility: hidden;
 }"""
 
