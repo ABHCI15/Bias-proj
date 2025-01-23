@@ -2,18 +2,23 @@ import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 import random
+from streamlit_cookies_controller import CookieController
 
 # Create GSheets connection
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 
+controller = CookieController()
 
-
-@st.cache_data
+@st.cache_data?
 def get_toss():
     return random.randint(0, 1)
 
-toss = get_toss()
+if controller.get("toss") is None:
+    toss = get_toss()
+    controller.set("toss", toss)
+else:
+    toss = controller.get("toss")
 
 st.title("Social Media Usage Survey")
 
