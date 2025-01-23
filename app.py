@@ -10,7 +10,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 controller = CookieController()
 
-@st.cache_data?
+# @st.cache_data
 def get_toss():
     return random.randint(0, 1)
 
