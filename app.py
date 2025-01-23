@@ -128,6 +128,6 @@ with st.form(key="survey"):
         df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
         
         st.success("Response recorded successfully!")
-        st.dataframe(df)
+        # st.dataframe(df)
         st.cache_data.clear()
         conn.update(data=df)
