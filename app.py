@@ -5,6 +5,11 @@ import random
 
 # Create GSheets connection
 conn = st.connection("gsheets", type=GSheetsConnection)
+css = """#MainMenu {
+  visibility: hidden;
+}"""
+
+st.markdown(css, unsafe_allow_html=True)
 
 
 
