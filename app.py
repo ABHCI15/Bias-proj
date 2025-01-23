@@ -6,7 +6,7 @@ import random
 # Create GSheets connection
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-df = conn.read(ttl=0)
+
 
 @st.cache_data
 def get_toss():
@@ -117,10 +117,11 @@ with st.form(key="survey"):
             "Hours Spent": hours_spent,
             "High School": high_school
         }
+        df = conn.read(ttl=0)
         
         df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
         
         st.success("Response recorded successfully!")
         st.dataframe(df)
-
+        st.cache_data.clear()
         conn.update(data=df)
