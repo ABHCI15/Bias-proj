@@ -97,6 +97,12 @@ if controller.get("submitted") is None:
             index=None
         )
         
+        location = st.selectbox(
+            "Are you from San Diego?",
+            options=["Yes", "No"],
+            index=None
+        )
+        
         st.write("Please answer the following questions:")
         social_media_allowed = st.radio(
             "Do you think that high school students should be allowed to spend more than an hour a day on social media/short-form content?",
@@ -121,7 +127,7 @@ if controller.get("submitted") is None:
         submit_button = st.form_submit_button(label="Submit")
 
         if submit_button:
-            if age == 0 or not gender or not grade_level or not ethnicity or not social_media_allowed or hours_spent is None or not high_school:
+            if age == 0 or not gender or not grade_level or not ethnicity or not location or not social_media_allowed or hours_spent is None or not high_school:
                 st.warning("⚠️ Please fill out all fields before submitting.")
             else:
                 new_row = {
@@ -133,7 +139,8 @@ if controller.get("submitted") is None:
                     "Ethnicity": ethnicity,
                     "Social Media Allowed": social_media_allowed,
                     "Hours Spent": hours_spent,
-                    "High School": high_school
+                    "High School": high_school,
+                    "Location (San Diego)": location
                 }
                 
                 df = conn.read(ttl=0)
