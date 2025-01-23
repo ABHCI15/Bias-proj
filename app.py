@@ -10,7 +10,7 @@ import time
 st.set_page_config(
     page_title="Survey Social Media",
     page_icon="📱",
-    layout="wide"
+    # layout="wide"
 )
 controller = CookieController()
 
