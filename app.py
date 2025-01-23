@@ -150,3 +150,4 @@ if controller.get("submitted") is None:
                 st.cache_data.clear()
                 conn.update(data=df)
                 controller.set("submitted", "True")
+                st.rerun()
