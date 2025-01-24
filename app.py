@@ -93,7 +93,7 @@ if controller.get("submitted") is None:
         
         ethnicity = st.selectbox(
             "What ethnicity are you?",
-            options=["Asian","Asian Indian", "Black", "Hispanic/Latino", "White", "Other", "Prefer not to say"],
+            options=["Asian","Asian_Indian", "Black", "Hispanic/Latino", "White", "Other", "Prefer not to say"],
             index=None
         )
         
