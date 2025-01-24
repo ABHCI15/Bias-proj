@@ -102,6 +102,11 @@ if controller.get("submitted") is None:
             options=["Yes", "No"],
             index=None
         )
+        high_school = st.radio(
+            "Are you currently in high school?",
+            options=["Yes", "No"], 
+            index=None
+        )
         
         st.write("Please answer the following questions:")
         social_media_allowed = st.radio(
@@ -111,17 +116,12 @@ if controller.get("submitted") is None:
         )
 
         hours_spent = st.slider(
-            "How many hours a day do you spend using social media or watching short-form content?",
+            "How many hours a day do you spend using social media or watching short-form content (tik tok/reels/videos under ~60 seconds)?",
             min_value=0,
             max_value=24,
             # value=1,
             step=1,
             
-        )
-        high_school = st.radio(
-            "Are you currently in high school?",
-            options=["Yes", "No"], 
-            index=None
         )
 
         submit_button = st.form_submit_button(label="Submit")
