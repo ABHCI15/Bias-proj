@@ -98,7 +98,7 @@ if controller.get("submitted") is None:
         )
         
         location = st.selectbox(
-            "Are you from San Diego?",
+            "Are you currently located in San Diego?",
             options=["Yes", "No"],
             index=None
         )
