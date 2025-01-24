@@ -120,7 +120,7 @@ if controller.get("submitted") is None:
             min_value=0,
             max_value=24,
             # value=1,
-            step=1,
+            step=0.1,
             
         )
 
