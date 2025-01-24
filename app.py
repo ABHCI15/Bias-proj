@@ -116,7 +116,7 @@ if controller.get("submitted") is None:
         )
 
         hours_spent = st.slider(
-            "How many hours a day do you spend using social media or watching short-form content (tik tok/reels/videos under ~60 seconds)?",
+            "How many hours a day do you spend using social media or watching short-form content (tik tok/reels/videos under ~60 seconds, round up to the nearest hour)?",
             min_value=0,
             max_value=24,
             # value=1,
