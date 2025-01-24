@@ -66,7 +66,7 @@ if controller.get("submitted") is None:
 
         ---
 
-        **Now, please proceed with the survey.**
+        **Now, please proceed with the survey, try to be as honest as possible**
 
         """)
 
